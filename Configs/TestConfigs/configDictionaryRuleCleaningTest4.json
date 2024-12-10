@@ -1,0 +1,4 @@
+{
+  "footer": ["background-color", "padding", "text-align"],
+  "p": ["font-size", "line-height", "text-align"]
+}

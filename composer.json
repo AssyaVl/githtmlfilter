@@ -1,0 +1,21 @@
+{
+    "name": "main/htmlfilter",
+    "description": "HTML Formatter Library.",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "htmlfilter\\": "src/" 
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.4"
+    },
+    "require": {
+         "php": "^7.4 || ^8.0"
+    }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест программы</title>
+</head>
+<body>
+    <button style="background-color: blue; border: 2px solid black; border-radius: 5px; padding: 10px; margin: 5px;">
+        Click Me
+    </button>
+    <input type="text" style="border: 1px solid gray; padding: 5px; font-size: 16px; color: red; margin: 10px;" placeholder="Enter text here">
+    <nav>
+        <h2>Main Navigation</h2>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li>
+                <a href="#">Services</a>
+                <nav>
+                    <h3>Sub Navigation</h3>
+                    <ul>
+                        <li><a href="#">Service 1</a></li>
+                        <li><a href="#">Service 2</a></li>
+                    </ul>
+                </nav>
+            </li>
+        </ul>
+    </nav>
+    <div id="header" class="highlight">
+        Заголовок
+    </div>
+    <div id="main-content">
+        <span style="color:#336600">
+            Текст с цветом
+            <span style="line-height:normal;font-size:15px">Текст с нормальным межстрочным интервалом</span>
+        </span>
+        <img src="image.jpg" style="height:248px; width:300px;" alt="Пример изображения">
+        <span style="line-height:normal">Другой текст с встроенным стилем</span>
+        <span> <span>xxx</span> </span>
+    </div>
+    <div id="footer" class="text-bold">
+        <span> <span>xxx</span> </span>
+	    <span> zzz <span>xxx</span> yyy </span>
+        Подвал
+    </div>
+</body>
+</html>

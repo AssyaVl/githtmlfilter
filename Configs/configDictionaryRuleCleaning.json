@@ -1,0 +1,4 @@
+{
+    "label": ["color", "font-weight", "margin-bottom"],
+    "h1": ["font-size", "font-weight", "line-height"]
+  }

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестирование правил</title>
+</head>
+<body>
+    <label for="name" style="color: blue; font-weight: bold; margin-bottom: 10px; padding: 5px;">Name:</label>
+    <h1 style="font-size: 24px; font-weight: bold; line-height: 1.5; text-align: center;">Main Heading</h1>
+    <div id="header" class="highlight" style="background-color: blue;">
+        <span style="color:#336600">Текст с цветом<span style="line-height:normal"> и высотой строки</span></span>
+        <img src="image.jpg" style="height:248px; width:300px;" alt="Пример изображения">
+    </div>
+    <div id="main-content" class="text-bold">
+        <span style="line-height:normal">Этот текст должен быть очищен от встроенного стиля.</span>
+        <span style="color:red">Этот текст останется.</span>
+    </div>
+    <footer>
+        <footer>
+            <h3>Nested Footer</h3>
+            <p>This is a nested footer inside the main footer.</p>
+        </footer>
+    </footer>
+    <div id="footer" class="text-italic">
+        <p>Футер без изменений.</p>
+	<span> <span>xxx</span> </span>
+	<span> zzz <span>xxx</span> yyy </span> 
+    </div>
+</body>
+</html>

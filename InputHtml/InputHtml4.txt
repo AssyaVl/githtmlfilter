@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пример обработки</title>
+</head>
+<body>
+    <h1 class="main-title">Заголовок первого уровня</h1>
+    <div id="footer" style="padding:20px; background-color:#f0f0f0;">
+        <div class="highlight" id="footessr" style="padding:20px; font-size:16px; color:red;" >Это абзац с красным текстом.</div>
+        <p style="padding:20px" class="main-title">Это другой абзац с нормальным межстрочным интервалом.</p>
+        <span style="font-weight:bold;">Жирный текст в спане.</span>
+        <a href="#" style="text-decoration:none;">Ссылка без подчеркивания</a>
+    </div>
+    <footer class="footer" style="background-color:#333; color:white;">
+        Подвал сайта
+    </footer>
+</body>
+</html>

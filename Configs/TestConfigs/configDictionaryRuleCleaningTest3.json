@@ -1,0 +1,4 @@
+{
+  "button": ["background-color", "border", "border-radius"],
+  "input": ["border", "padding", "font-size"]
+}

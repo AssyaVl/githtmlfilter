@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестирование правил</title>
+</head>
+<body>
+    <div id="header" class="highlight">
+        <span style="color:#336600">Текст заголовка<span style="color:#336601"> с встроенным стилем</span></span>
+    </div>
+    <div id="main-content">
+        <p style="font-size:16px;">Некоторый текст с <span style="color:red">встроенными стилями</span>.</p>
+        <img src="image.jpg" style="height:248px;width:300px" alt="Изображение">
+        <span style="font-size:14px">Другой текст<span style="color:blue"> с вложенными span</span></span>
+    </div>
+    <div id="footer" class="text-bold">Футер</div>
+</body>
+</html>

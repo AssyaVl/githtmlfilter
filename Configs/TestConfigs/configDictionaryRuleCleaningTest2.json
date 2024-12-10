@@ -1,0 +1,4 @@
+{
+  "footer": ["background-color", "color", "text-align"],
+  "header": ["background-color", "padding", "box-shadow"]
+}
