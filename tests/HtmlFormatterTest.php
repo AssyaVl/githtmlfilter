@@ -20,11 +20,6 @@ class HtmlFormatterTest extends TestCase {
      * @dataProvider htmlConversionProvider
      */
     public function testFullHtmlConversion($inputHtmlPath, array $configPaths, $expectedHtmlPath) {
-        // echo "///////////////////////////" . "\n";
-        // echo $inputHtmlPath . "\n";
-        // print_r($configPaths . "\n");
-        // echo $expectedHtmlPath . "\n";
-        // echo "/////////////////////////" . "\n";
 
         // Инициализация конвертера
         $converter = new CodeConverters();
@@ -47,8 +42,6 @@ class HtmlFormatterTest extends TestCase {
         // Преобразование дерева обратно в HTML
         $outputHtml = $converter->codeGenerator($domDocument);
         $outputHtml = str_replace(["\r\n","\n","\r"],"", $outputHtml);
-
-
 
         // Загрузка ожидаемого результата
         $expectedHtml = file_get_contents($expectedHtmlPath);

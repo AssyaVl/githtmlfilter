@@ -25,6 +25,9 @@ class Fomatter{
         //передаем входной код html в метод для постройки дерева
         $converter = new CodeConverters();
         $domDocument = $converter->parse($sourceHtmlIn);
+        if ($domDocument === false){
+            return;
+        }
         
         $config = new GetConfig();
         $rules = [
@@ -34,7 +37,6 @@ class Fomatter{
         $process = new Process($rules);
 
         // передаём дерево на обход, где будут применяться правила
-        //$process = new Process($sourceHtmlIn, $sourceHtmlOut);
         $process->traverse($domDocument);
     
         //передаем дерево для обратного преобразования в код
@@ -48,11 +50,24 @@ class Fomatter{
     }
 }
 
-//получаем аргумент, в котором содержится путь/ссылка к файлу с html кодом
-$sourceHtmlIn = $argv[1];
-//получаем аргумент, в котором содержиться путь к файлу, в котором будет сохранен преобразованный html код
-$sourceHtmlOut = $argv[2];
+$sourceHtmlIn = false;
+$sourceHtmlOut = false;
 
+//получаем аргумент, в котором содержится путь/ссылка к файлу с html кодом
+if (isset($argv[1])){
+    $sourceHtmlIn = $argv[1];
+}
+
+//получаем аргумент, в котором содержиться путь к файлу, в котором будет сохранен преобразованный html код
+if (isset($argv[2])){
+    $sourceHtmlOut = $argv[2];
+}
+
+// проверяем корректность получения аргументов из командной строки
+if ($sourceHtmlIn === false || $sourceHtmlOut === false){
+    echo "Ошибка ввода. Недостаточно аргументов.";
+    exit();
+}
 //запуск программы
 $formatter = new Fomatter();
 $formatter->start($sourceHtmlIn, $sourceHtmlOut);

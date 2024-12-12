@@ -24,6 +24,9 @@ class CodeConverters {
         try {
             // Загружаем HTML
             $html = $this->htmlLoader->getContent($source);
+            if ($html === false){
+                return false;
+            }
             $domDocument = new DOMDocument();
             libxml_use_internal_errors(true); // Игнорируем ошибки парсинга
             $domDocument->loadHTML(mb_convert_encoding($html, 'HTML-ENTITIES', 'UTF-8'));

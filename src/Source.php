@@ -1,6 +1,8 @@
 <?php
 namespace htmlfilter;
 
+use Exception;
+
 /**
  * Интерфейс для классов блока SOURCE
  */
@@ -20,15 +22,32 @@ class GetHtml implements IGetContentFromFile {
     public function getContent(string $source) {
         if (filter_var($source, FILTER_VALIDATE_URL)) {
             // Если это URL, загружаем содержимое по URL
-            $urlHtml = file_get_contents($source);
+            try{
+                set_error_handler(function () {
+                    throw new Exception();
+                });                
+                $urlHtml = file_get_contents($source);
+                restore_error_handler();
+            }
+            catch (Exception){
+                echo ("Не удалось загрузить содержимое по URL: {$source}");
+                restore_error_handler();
+                return false;
+            }
             if ($urlHtml === false) {
                 echo ("Не удалось загрузить содержимое по URL: {$source}");
+                return false;
             }
             return $urlHtml;
         }
         elseif (file_exists($source)) {
             // Если это файл, загружаем содержимое из файла
-            return file_get_contents($source);
+            $fileHtml = file_get_contents($source);
+            if ($fileHtml === false) {
+                echo ("Не удалось загрузить содержимое файла: {$source}");
+                return false;
+            }
+            return $fileHtml;
         } 
         echo ("Неверный источник: {$source}");
         return false;
